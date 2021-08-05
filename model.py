@@ -439,7 +439,7 @@ def l_layer_model(X, Y, layers_dims, num_iterations=3000, learning_rate=0.0075, 
         if i % 1000 == 0 and print_cost:
             print(f'cost after {i} iterations:', cost)
 
-    return para
+    return para, costs
 
 
 def l_layer_model_with_re(X, Y, layers_dims, num_iterations=3000, learning_rate=0.0075, break_time=1000,
@@ -482,7 +482,7 @@ def l_layer_model_with_re(X, Y, layers_dims, num_iterations=3000, learning_rate=
         if i % 1000 == 0 and print_cost:
             print(f'cost after {i} iterations:', cost)
 
-    return para
+    return para, costs
 
 
 def l_layer_model_dropout(X, Y, layers_dims, num_iterations=3000, learning_rate=0.0075,
@@ -512,7 +512,7 @@ def l_layer_model_dropout(X, Y, layers_dims, num_iterations=3000, learning_rate=
         if i % 1000 == 0 and print_cost:
             print(f'cost after {i} iterations:', cost)
 
-    return para
+    return para, costs
 
 
 def predict(X_test, para, L):
